@@ -27,12 +27,10 @@ const Login = () => {
 
   const validateUser = async (values: Login) => {
     const userData = await AuthService.getUser();
-    console.log(userData, values);
     if (
       userData.email !== values.email ||
       userData.password !== values.password
     ) {
-      console.log("girdi");
       return false;
     }
     return true;
