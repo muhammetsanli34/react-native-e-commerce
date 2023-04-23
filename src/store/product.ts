@@ -18,7 +18,7 @@ const initialState = {
     products: [],
 } as ProductState;
 
-export const getProducts = createAsyncThunk("product/getProducts", async () => {
+export const getProducts = createAsyncThunk<Array<Product>>("product/getProducts", async () => {
   const res = await ApiService.get("/products");
   console.log(res);
   return res;

@@ -16,6 +16,7 @@ export default function Loader({ visible = false, task = "" }) {
       visible={visible}
       statusBarTranslucent={true}
     >
+      
       <SafeAreaView style={styles.centeredView}>
         <View style={styles.modalView}>
           <ActivityIndicator
